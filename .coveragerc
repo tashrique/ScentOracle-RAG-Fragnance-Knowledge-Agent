@@ -1,0 +1,31 @@
+ [run]
+source = backend
+omit = 
+    */tests/*
+    */__init__.py
+    */migrations/*
+    */venv/*
+    */env/*
+
+[report]
+exclude_lines =
+    pragma: no cover
+    def __repr__
+    raise NotImplementedError
+    if __name__ == .__main__.:
+    pass
+    raise ImportError
+    except ImportError:
+    raise NotImplementedError
+    if TYPE_CHECKING:
+    @abstractmethod
+    @property
+    @classmethod
+    @staticmethod
+    def __init__
+
+[html]
+directory = coverage_html
+
+[xml]
+output = coverage.xml
