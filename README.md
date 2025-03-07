@@ -1,5 +1,10 @@
 # 🌸💨 ScentOracle: RAG Fragrance Knowledge Agent
 
+[![Maintainability](https://api.codeclimate.com/v1/badges/cb21ea416335b602fe72/maintainability)](https://codeclimate.com/github/tashrique/ScentOracle-RAG-Fragnance-Knowledge-Agent/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/cb21ea416335b602fe72/test_coverage)](https://codeclimate.com/github/tashrique/ScentOracle-RAG-Fragnance-Knowledge-Agent/test_coverage)
+
+## Try the app: [Under Construction](www.tashrique.com)
+
 ## 🔍 Overview
 ScentOracle-RAG is a **Retrieval-Augmented Generation (RAG) system** that collects and analyzes **perfume data** from **popular websites and Reddit**. The goal is to build a **structured knowledge base** for fragrance clones, dupes, and alternatives.
 
