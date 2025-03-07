@@ -121,6 +121,17 @@ class FragranceScraper:
         print(f"Found {len(designer_links)} designer links")
         return designer_links
 
+    def generate_designer_links(self):
+        """
+        Generate and save a list of all designer/brand URLs.
+        This is typically the first step in the scraping process.
+        """
+        links = self.get_all_designer_links()
+        with open("../../data/website_designer_links.txt", "w") as f:
+            for link in links:
+                f.write(link + "\n")
+        print(f"Saved {len(links)} designer links to file.")
+
     def scrape_perfume_details(self, url):
         """
         Scrape all perfume links for a specific designer/brand.
@@ -333,25 +344,15 @@ class FragranceScraper:
         with open("../../data/website_all_perfumes.json", "w") as f:
             json.dump(all_perfumes_data, f, indent=2)
 
-    def generate_designer_links(self):
-        """
-        Generate and save a list of all designer/brand URLs.
-        This is typically the first step in the scraping process.
-        """
-        links = self.get_all_designer_links()
-        with open("../../data/website_designer_links.txt", "w") as f:
-            for link in links:
-                f.write(link + "\n")
-        print(f"Saved {len(links)} designer links to file.")
 
 
 # Main Execution
 if __name__ == "__main__":
     scraper = FragranceScraper()
-    scraper.scrape_all_designers()
+    # scraper.scrape_all_designers()
     
     # Uncomment to generate designer links
     # scraper.generate_designer_links()
     
     # Uncomment to scrape all perfume details
-    # scraper.scrape_all_perfumes()
+    scraper.scrape_all_perfumes()
